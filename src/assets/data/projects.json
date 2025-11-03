@@ -1,0 +1,29 @@
+[
+    {
+        "slug": "to-do-list-app",
+        "title": "To do List App",
+        "description": "A simple to-do list app to manage tasks.",
+        "technologies": ["React", "JavaScript", "CSS" , "Local Storage"],
+        "screenshot": [{
+            "url": "https://picsum.photos/seed/picsum/600/400",
+            "caption": "Screenshot of To do List App"
+        }
+    ],
+    "url": "https://picsum.photos/seed/picsum/600/400",
+    "github": "https://github.com/user/todo-list-app",
+    "date": "2023-10-15",
+    "tags": ["productivity", "task management"]
+    },
+    {
+        "id": 2,
+        "title": "Project Two",
+        "description": "This is the second project.",
+        "technologies": ["Node.js", "Express", "MongoDB"]
+    },
+    {
+        "id": 3,
+        "title": "Project Three",
+        "description": "This is the third project.",
+        "technologies": ["Python", "Flask", "SQLAlchemy"]
+    }
+]
