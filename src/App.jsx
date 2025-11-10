@@ -10,29 +10,40 @@ import ProjectIndex from "@/pages/projects/index";
 //Import components
 import NavBar from './components/NavBar';
 import Footer from "./components/Footer";
+import Intro from "./components/Intro";
+import Projects from "./components/Projects";
+import Contacts from "./components/Contacts";
 
 
-const App = () => {
+export default function App() {
   return (
-    <Router>
-      <NavBar />
-      <h1>Hello from App</h1>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<PageNotFound />} />
-        <Route path="/projects" element={<ProjectIndex />} />
+            <div className="min-h-screen bg-background text-foreground relative">
+              <NavBar />
+            <main className="max-w-4xl mx-auto ">
+                <Intro />
+                <Projects />
+                <Contacts />
+                <Footer />
+            </main>
+        </div>
+    // <Router>
+    //   <NavBar />
+    //   <h1>Hello from App</h1>
+    //   <Routes>
+    //     <Route path="/" element={<Home />} />
+    //     <Route path="/about" element={<About />} />
+    //     <Route path="/contact" element={<Contact />} />
+    //     <Route path="*" element={<PageNotFound />} />
+    //     <Route path="/projects" element={<ProjectIndex />} />
 
-        {/* projects */}
+    //     {/* projects */}
 
 
 
-      </Routes>
-      <Footer />
-    </Router>
+    //   </Routes>
+    //   <Footer />
+    // </Router>
       
   );
-}
+};
 
-export default App;

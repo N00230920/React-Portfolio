@@ -1,35 +1,14 @@
-import  {Link} from 'react-router-dom'
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-} from "@/components/ui/navigation-menu"
-
-
-const NavBar = () => {
+export default function NavBar() {
     return (
-        <div>
-            <NavigationMenu>
-            <NavigationMenuList>
-                <NavigationMenuItem>
-                <NavigationMenuTrigger>Item One</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                    <NavigationMenuLink>Link</NavigationMenuLink>
-                </NavigationMenuContent>
-                </NavigationMenuItem>
-            </NavigationMenuList>
-            </NavigationMenu>
-            <Link to = "/">Home</Link>
-            <Link to = "/about">About</Link>
-            <Link to = "/projects">Projects</Link>
-            <Link to = "/contact">Contact</Link>
-        </div>
+        <nav className="fixed left-8 top-1/2 translate-y-1/2 z-10 hidden lg:block">
+            <div className="flex flex-col gap-4">
+                {['Intro', 'Projects','Contacts'].map(section => (
+                        <button key={section} onClick={() => document.getElementById(section).scrollIntoView({ behavior: "smooth" })} className="w-2 h-8 rounded-full bg-muted-foreground/30 hover:bg-muted-foreground/50 transition-colors duration-300">
+                            <span className="text-sm ml-4">{section}</span>
+                        </button>
+                    )
+                )}
+            </div>
+        </nav>
     )
-}
-
-export default NavBar
+};
