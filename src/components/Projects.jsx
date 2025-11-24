@@ -5,8 +5,8 @@ import ProjectCard from '@/components/ProjectCard';
 export default function Projects() {
   const [projects] = useState(projectsJSON);
 
-  const projectCards = projects.map((project) => (
-    <ProjectCard key={project.slug} project={project} />
+  const projectCards = projects.map((project, index) => (
+    <ProjectCard key={project.slug || project.id || index} project={project} />
   ));
 
     return (

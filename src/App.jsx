@@ -16,6 +16,13 @@ import Footer from './components/Footer';
 export default function App() {
 
   const [activeSection, setActiveSection] = useState('');
+  const [isDark, setisDark] = useState(localStorage.getItem('dark') === 'true');
+
+  useEffect(() => {
+    console.log("darkmode:", isDark);
+    document.documentElement.classList.toggle('dark', isDark);
+  },[isDark]);
+
 
   useEffect(() => {
     const sections = ['intro', 'projects', 'contact'];
@@ -36,6 +43,8 @@ export default function App() {
 
   }, []);
 
+  const toggleTheme = () => setisDark(currentMode => !currentMode );
+
   return (
     <div className="min-h-screen bg-background text-foreground relative">
       <Navbar activeSection={activeSection} />
@@ -43,8 +52,10 @@ export default function App() {
         <Intro />
         <Projects />
         <Contact />
-        <Footer />
+        <Footer toggleTheme ={toggleTheme} isDark={isDark}/>
       </main>
+
+      <div className='fixed bottom-0 left-0 h-24 bg-blue-500'></div>
     </div>
     // <Router>
     //   <Navbar />
@@ -63,4 +74,4 @@ export default function App() {
 
     // </Router>
   );
-}
+};
