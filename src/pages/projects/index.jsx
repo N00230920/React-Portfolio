@@ -1,8 +1,7 @@
-export default function ProjectIndex() {
+export default function Index() {
     return (
         <div>
-            <h1>My Projects</h1>
-            <p>Here are some of my projects...</p>
+            <h1 className="text-3xl font-bold underline">Projects Index Page</h1>
         </div>
     );
 }
