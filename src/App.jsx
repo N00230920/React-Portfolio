@@ -1,77 +1,58 @@
-import { BrowserRouter as Router, Routes, Route  } from 'react-router'
-import { useEffect, useState } from 'react';
-import Navbar from './components/Navbar';
-import Intro from './components/Intro';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-
-// pages
-// import Home from './pages/Home';
-// import About from './pages/About';
-// import Contact from './pages/Contact'
-// import PageNotFound from './pages/PageNotFound';
-// import ProjectIndex from '@/pages/projects/Index';
+import { useEffect, useState } from "react";
+import Navbar from "./components/Navbar";
+import Intro from "./components/Intro";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 export default function App() {
+  const [activeSection, setActiveSection] = useState("");
+  const [isDark, setIsDark] = useState(() => localStorage.getItem("dark") === "true");
 
-  const [activeSection, setActiveSection] = useState('');
-  const [isDark, setisDark] = useState(localStorage.getItem('dark') === 'true');
-
+  // Apply + persist theme
   useEffect(() => {
-    console.log("darkmode:", isDark);
-    document.documentElement.classList.toggle('dark', isDark);
-  },[isDark]);
+    document.documentElement.classList.toggle("dark", isDark);
+    localStorage.setItem("dark", String(isDark));
+  }, [isDark]);
 
-
+  // Active section observer (for nav highlighting)
   useEffect(() => {
-    const sections = ['intro', 'projects', 'contact'];
-    const targets = sections.map(section => document.getElementById(section));
+    const sections = ["intro", "projects", "contact"];
+    const targets = sections
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          console.log(entry.target.id);
-          setActiveSection(entry.target.id);
-        }
-      });
-    }, { threshold: 0.3, rootMargin: '0px 0px 0px 0px' });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActiveSection(entry.target.id);
+        });
+      },
+      { threshold: 0.35 }
+    );
 
-    targets.forEach(el => observer.observe(el))
-
-    return () => observer.disconnect()
-
+    targets.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
   }, []);
 
-  const toggleTheme = () => setisDark(currentMode => !currentMode );
+  const toggleTheme = () => setIsDark((m) => !m);
 
   return (
-    <div className="min-h-screen bg-background text-foreground relative">
-      <Navbar activeSection={activeSection} />
-      <main className='max-w-4xl mx-auto px-6 sm:px-8 lg:px-16'>
+    <div className="min-h-screen bg-background text-foreground relative overflow-x-hidden">
+      {/* subtle background glow */}
+      <div className="pointer-events-none fixed inset-0 -z-10 opacity-25 blur-3xl">
+        <div className="absolute -left-24 -top-24 h-80 w-80 rounded-full bg-primary" />
+        <div className="absolute -right-24 top-16 h-80 w-80 rounded-full bg-accent" />
+      </div>
+
+      <Navbar activeSection={activeSection} isDark={isDark} toggleTheme={toggleTheme} />
+
+      <main className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
         <Intro />
         <Projects />
         <Contact />
-        <Footer toggleTheme ={toggleTheme} isDark={isDark}/>
+        <Footer />
       </main>
-
-      <div className='fixed bottom-0 left-0 h-24 bg-blue-500'></div>
     </div>
-    // <Router>
-    //   <Navbar />
-    //   <Routes>
-    //     <Route path='/' element={<Home />} />
-    //     <Route path='/about' element={<About />} />
-    //     <Route path='/contact' element={<Contact />} />
-
-    //     <Route path='/projects' element={<ProjectIndex />} />
-
-
-    //     <Route path='*' element={<PageNotFound />} />
-    //   </Routes>
-
-    //   <Navbar />
-
-    // </Router>
   );
-};
+}

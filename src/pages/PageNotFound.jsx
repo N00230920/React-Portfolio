@@ -1,13 +1,14 @@
-import { useLocation } from 'react-router';
+import { useLocation } from "react-router-dom";
 
 export default function PageNotFound() {
-    let location = useLocation();
+  const location = useLocation();
 
-    console.log(location);
-
-    return (
-        <div>
-            <h2>Sorry, 404 the page { location.pathname } was not found</h2>
-        </div>
-    );
+  return (
+    <div className="mx-auto max-w-3xl px-6 py-24">
+      <h2 className="text-2xl font-semibold">404 — Page not found</h2>
+      <p className="mt-2 text-muted-foreground">
+        Sorry, the page <span className="font-mono">{location.pathname}</span> was not found.
+      </p>
+    </div>
+  );
 }
