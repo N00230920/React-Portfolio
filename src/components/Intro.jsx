@@ -1,58 +1,33 @@
-export default function Intro(){
-    return(
-        <header id="intro" className="min-h-screen flex items-center">
-          <div className="grid lg:grid-cols-5 gap-12 sm:gap-16 w-full">
-            <div className="lg:col-span-3 space-y-6 sm:space-y-8">
-              <div className="space-y-3 sm:space-y-2">
-                <div className="text-sm text-muted-foreground tracking-wider">PORTFOLIO / 2025</div>
-                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light tracking-tight">
-                  Mohammed <br />
-                  <span className="text-muted-foreground">Che</span>
-                </h1>
-              </div>
+export default function Intro() {
+  return (
+    <section className="min-h-screen bg-background text-foreground">
+      <div className="mx-auto grid min-h-[calc(100vh-80px)] max-w-6xl grid-cols-1 items-center gap-10 px-6 md:grid-cols-2">
+        {/* Left */}
+        <div>
+          <p className="font-sans text-lg opacity-80">Hello I’m</p>
 
-              <div className="space-y-6 max-w-md">
-                <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
-                  Frontend Developer crafting digital experiences at the intersection of
-                  <span className="text-foreground"> design</span>,<span className="text-foreground"> technology</span>, and
-                  <span className="text-foreground"> user experience</span>.
-                </p>
+          <h1 className="mt-3 font-serif text-6xl leading-[0.95] md:text-8xl">
+            Christine
+            <br />
+            Montcheu
+          </h1>
 
-                <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 text-sm text-muted-foreground">
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                    Available for work
-                  </div>
-                  <div>Ireland</div>
-                </div>
-              </div>
-            </div>
+          <p className="mt-6 max-w-md font-sans text-lg leading-6 opacity-85 md:text-base">
+            I’m a student developer focused on JavaScript, creative coding, and
+            full-stack systems. I design and engineer projects that blend clean
+            code with fun, responsive interactions.
+          </p>
+        </div>
 
-            <div className="lg:col-span-2 flex flex-col justify-end space-y-6 sm:space-y-8 mt-8 lg:mt-0">
-              <div className="space-y-4">
-                <div className="text-sm text-muted-foreground font-mono">CURRENTLY</div>
-                <div className="space-y-2">
-                  <div className="text-foreground">Lecturer</div>
-                  <div className="text-muted-foreground">@ IADT</div>
-                  <div className="text-xs text-muted-foreground">2025 — Present</div>
-                </div>
-              </div>
+        {/* Right */}
+        <div className="relative flex justify-center md:justify-end">
+          <div className="h-[300px] w-[300px] rounded-3xl bg-card md:h-[410px] md:w-[410px]" />
 
-              <div className="space-y-4">
-                <div className="text-sm text-muted-foreground font-mono">FOCUS</div>
-                <div className="flex flex-wrap gap-2">
-                  {['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS'].map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-3 py-1 text-xs border border-border rounded-full hover:border-muted-foreground/50 transition-colors duration-300"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
+          <div className="absolute right-15 top-10 h-[300px] w-[300px] overflow-hidden rounded-3xl bg-white shadow-lg shadow-black/10 md:h-[390px] md:w-[390px]">
+            {/* image later */}
           </div>
-        </header>
-    );
+        </div>
+      </div>
+    </section>
+  );
 }
