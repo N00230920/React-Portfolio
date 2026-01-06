@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
+import Navbar from "./components/NavBar";
 import Intro from "./components/Intro";
 import Tools from "./components/Tools";
 import RecentWork from "./components/RecentWork";
