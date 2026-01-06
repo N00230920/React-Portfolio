@@ -2,7 +2,7 @@ import SunIcon from "../assets/SVG/sun.svg";
 import MoonIcon from "../assets/SVG/moon.svg";
 import LeafIcon from "../assets/SVG/leaf.svg";
 
-export default function Navbar({ activeSection, isDark, toggleTheme }) {
+export default function NavBar({ activeSection, isDark, toggleTheme }) {
   const scrollTo = (id) =>
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 

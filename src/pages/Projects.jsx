@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Navbar from "../components/Navbar";
+import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import { getAllProjects } from "../assets/data/projects";
 
@@ -8,7 +8,7 @@ export default function Projects() {
 
   return (
     <div className="min-h-screen bg-sand text-olive">
-      <Navbar />
+      <NavBar />
 
       <main className="mx-auto max-w-6xl px-6 pt-14 pb-24">
         <h1 className="font-serif text-7xl md:text-8xl">Projects</h1>

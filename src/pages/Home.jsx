@@ -1,5 +1,5 @@
 // src/pages/Home.jsx
-import Navbar from "../components/Navbar";
+import NavBar from "../components/NavBar";
 import Intro from "../components/Intro";
 import Tools from "../components/Tools";
 import RecentWork from "../components/RecentWork";
@@ -13,7 +13,7 @@ export default function Home({
 }) {
   return (
     <div className="min-h-screen bg-card-foreground text-card overflow-x-hidden">
-      <Navbar
+      <NavBar
         activeSection={activeSection}
         isDark={isDark}
         toggleTheme={toggleTheme}

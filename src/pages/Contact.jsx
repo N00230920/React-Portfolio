@@ -1,11 +1,11 @@
-import Navbar from "../components/Navbar";
+import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 
 export default function Contact() {
   return (
     <div className="min-h-screen bg-sand text-olive overflow-x-hidden">
-      {/* Navbar */}
-      <Navbar />
+      {/* NavBar */}
+      <NavBar />
 
       {/* Page content */}
       <main className="mx-auto w-full max-w-6xl px-6 pt-14 pb-24">

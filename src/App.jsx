@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/NavBar";
+import NavBar from "./components/NavBar";
 import Intro from "./components/Intro";
 import Tools from "./components/Tools";
 import RecentWork from "./components/RecentWork";
@@ -17,7 +17,7 @@ import ProjectShow from "./pages/ProjectShow";
 function HomePage({ activeSection, isDark, toggleTheme }) {
   return (
     <div className="min-h-screen bg-sand text-olive overflow-x-hidden">
-      <Navbar activeSection={activeSection} isDark={isDark} toggleTheme={toggleTheme} />
+      <NavBar activeSection={activeSection} isDark={isDark} toggleTheme={toggleTheme} />
 
       <main className="mx-auto w-full max-w-6xl px-6">
         <Intro />
