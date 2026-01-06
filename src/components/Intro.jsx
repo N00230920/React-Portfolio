@@ -1,4 +1,4 @@
-import SelfPortrait from "../assets/selfPortrait.png";
+import SelfPortrait from "../assets/Portrait.png";
 
 export default function Intro() {
   return (
