@@ -1,3 +1,5 @@
+import SelfPortrait from "../assets/selfPortrait.png";
+
 export default function Intro() {
   return (
     <section className="min-h-screen bg-background text-foreground">
@@ -23,9 +25,14 @@ export default function Intro() {
         <div className="relative flex justify-center md:justify-end">
           <div className="h-[300px] w-[300px] rounded-3xl bg-card md:h-[410px] md:w-[410px]" />
 
-          <div className="absolute right-15 top-10 h-[300px] w-[300px] overflow-hidden rounded-3xl bg-white shadow-lg shadow-black/10 md:h-[390px] md:w-[390px]">
-            {/* image later */}
+          <div className="absolute left-32 top-5 h-[300px] w-[300px] overflow-hidden rounded-3x md:h-[400px] md:w-[400px]">
+            <img
+              src={SelfPortrait}
+              alt="Portrait of Christine Montcheu"
+              className="h-full w-full object-cover"
+            />
           </div>
+
         </div>
       </div>
     </section>

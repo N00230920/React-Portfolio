@@ -16,25 +16,52 @@
     "tags": ["productivity", "task management"]
   },
   {
-    "slug": "project-two",
-    "title": "Project Two",
-    "description": "This is the second project.",
-    "technologies": ["Node.js", "Express", "MongoDB"],
-    "screenshots": [],
+    "slug": "botanica",
+    "title": "Botanica",
+    "description": "This is an app that helps with maintaining your plant.",
+    "technologies": ["PHP", "MySQL", "TailwindCSS"],
+    "screenshots": [{"url": "/images/botanica.jpg",
+                        "caption": "Botanica App Screenshot"}],
     "live": "",
-    "github": "",
+    "github": "https://github.com/N00230920/Software-Project-2025",
     "date": "2024-01-01",
     "tags": []
   },
+  
   {
-    "slug": "project-three",
-    "title": "Project Three",
-    "description": "This is the third project.",
-    "technologies": ["Python", "Flask", "SQLAlchemy"],
-    "screenshots": [],
-    "live": "",
+    "slug": "smartguide",
+    "title": "SmartGuide",
+    "description": "This is a smart guide app.",
+    "technologies": ["Figma"],
+    "screenshots": [{"url": "/images/smartguide2.jpg",
+                        "caption": "SmartGuide App Screenshot"}],
+    "live": "https://smartguidechristine.netlify.app/",
     "github": "",
     "date": "2024-02-01",
+    "tags": []
+  },
+  {
+    "slug": "sernenity",
+    "title": "Serenity",
+    "description": "This is a medical clinic project.",
+    "technologies": ["JavaScript", "React", "CSS"],
+    "screenshots": [{"url": "/images/serenity.jpg",
+                        "caption": "Serenity App Screenshot"}],
+    "live": "https://serenityca.netlify.app/",
+    "github": "https://github.com/N00230920/Medical-Clinic-App",
+    "date": "2025-11-01",
+    "tags": []
+  },
+  {
+    "slug": "globefind",
+    "title": "GlobeFind",
+    "description": "This is a countries project.",
+    "technologies": ["React", "JavaScript", "ReactBits"],
+    "screenshots": [{"url": "/images/globefind.jpg",
+                        "caption": "GlobeFind App Screenshot"}],
+    "live": "https://globefind.netlify.app/",
+    "github": "https://github.com/N00230920/Rest_Countries_FED",
+    "date": "2025-11-01",
     "tags": []
   }
 ]

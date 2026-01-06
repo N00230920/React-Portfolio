@@ -11,7 +11,7 @@ export default function CTA() {
         <div className="mt-8">
           <Link
             to="/contact"
-            className="inline-flex items-center justify-center rounded-lg bg-accent px-5 py-2 font-sans text-lg text-card shadow-soft hover:opacity-90"
+            className="inline-flex items-center justify-center rounded-lg bg-accent text-primary px-5 py-2 font-sans text-lg text-card shadow-soft hover:opacity-90"
           >
             Contact Moi
           </Link>

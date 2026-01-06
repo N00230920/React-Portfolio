@@ -43,7 +43,7 @@ export default function ProjectShowLayout({ project }) {
 
           {project.tags?.length ? (
             <>
-              <h3 className="mt-10 font-serif text-2xl">Tags</h3>
+              <h3 className="mt-10 font-serif text-2xl">Brief</h3>
               <p className="mt-3 font-sans opacity-80">{project.tags.join(" • ")}</p>
             </>
           ) : null}
@@ -58,7 +58,7 @@ export default function ProjectShowLayout({ project }) {
                 href={project.live}
                 target="_blank"
                 rel="noreferrer"
-                className="block rounded-lg bg-primary px-4 py-2 text-center font-sans text-sm text-olive hover:opacity-90"
+                className="block rounded-lg bg-accent px-4 py-2 text-center font-sans text-sm text-primary hover:opacity-90"
               >
                 Live Demo
               </a>
@@ -69,7 +69,7 @@ export default function ProjectShowLayout({ project }) {
                 href={project.github}
                 target="_blank"
                 rel="noreferrer"
-                className="block rounded-lg bg-sand px-4 py-2 text-center font-sans text-sm text-olive shadow-soft hover:opacity-90"
+                className="block rounded-lg bg-accent px-4 py-2 text-center font-sans text-sm text-primary shadow-soft hover:opacity-90"
               >
                 GitHub Repo
               </a>

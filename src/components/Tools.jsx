@@ -41,7 +41,7 @@ function ToolItem({ icon, label }) {
 function ToolPanel({ title, items }) {
   return (
     <div className="rounded-2xl bg-card px-8 py-6 text-card-foreground shadow-sm shadow-black/10">
-      <p className="font-sans text-lg uppercase tracking-wide text-accent opacity-90">
+      <p className="font-sans text-lg uppercase tracking-wide text-buton opacity-90">
         {title}
       </p>
 

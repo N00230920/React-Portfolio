@@ -14,9 +14,9 @@ export default function Footer() {
               <span className="opacity-80">Email :</span>{" "}
               <a
                 className="underline underline-offset-4 hover:opacity-100"
-                href="mailto:you@example.com"
+                href="mailto:cmontcheu@gmail.com"
               >
-                you@example.com
+                cmontcheu@gmail.com
               </a>
             </p>
 
@@ -24,9 +24,9 @@ export default function Footer() {
               <span className="opacity-80">Phone :</span>{" "}
               <a
                 className="underline underline-offset-4 hover:opacity-100"
-                href="tel:+15555555555"
+                href="#"
               >
-                +1 (555) 555-5555
+                +353 (89) 605-2699
               </a>
             </p>
           </div>
